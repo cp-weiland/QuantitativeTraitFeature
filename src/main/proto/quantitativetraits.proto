@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package org.biohackathon.covid19bh;
+
+import "base.proto";
+
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+
+option java_outer_classname = "QuantitativeTraits";
+option java_package = "org.biohackathon.covid19bh";
+
+message QuantitativeTraitFeature {
+    string description = 1;
+    org.phenopackets.schema.v1.core.OntologyClass type = 2;
+    bool negated = 3;
+    string value = 4;
+    org.phenopackets.schema.v1.core.OntologyClass unit = 5;
+    org.phenopackets.schema.v1.core.OntologyClass assay = 6;
+    oneof onset {
+        org.phenopackets.schema.v1.core.Age age_of_onset = 7;
+        org.phenopackets.schema.v1.core.AgeRange age_range_of_onset = 8;
+    }
+    org.phenopackets.schema.v1.core.Biosample biosample = 9;
+    repeated org.phenopackets.schema.v1.core.Evidence evidence = 10;
+}
