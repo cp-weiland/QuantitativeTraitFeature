@@ -11,11 +11,11 @@ import org.biohackathon.covid19bh.*;
 
 import com.google.protobuf.util.JsonFormat;
 
-public class QuantitativeTraits01 {
+public class QTFexample {
 
     public static void main(String[] args) {
 
-	Phenopacket co19qt = new QuantitativeTraits01().covid19qt();
+	Phenopacket co19qt = new QTFexample().covid19qt();
 
 	/** Serialize to Protobuf */
 	
