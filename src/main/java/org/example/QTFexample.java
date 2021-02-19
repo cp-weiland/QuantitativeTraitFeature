@@ -54,7 +54,9 @@ public class QTFexample {
 	    .build();
 
 	QuantitativeTraitFeature complexTrait = QuantitativeTraitFeature.newBuilder()
-	    .setType(ontologyClass("CMO:0000015", "body temperature"))
+	    .setType(ontologyClass("CMO:0000015", "Body temperature"))
+	    .setValue("37.5")
+	    .setUnit(ontologyClass("UO:0000027", "Degrees Celsius"))
 	    .build();
 	    
 	Individual proband = Individual.newBuilder()
